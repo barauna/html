@@ -1,5 +1,9 @@
 function incluir() {
+	
 	var nome = document.getElementById("nome").value;
+	var endereco = document.getElementById("endereco").value;
+	var telefone = document.getElementById("telefone").value;
+	
 	var tabela = document.getElementById("pessoas");
 	var linha = document.createElement("tr");
 	
@@ -8,12 +12,22 @@ function incluir() {
 	linha.appendChild(colName);
 	
 	var colEndereco = document.createElement("td");
-	colEndereco.appendChild(document.createTextNode("jardim da penha"));
+	colEndereco.appendChild(document.createTextNode(endereco));
 	linha.appendChild(colEndereco);
 	
 	var colTelefone = document.createElement("td");
-	colTelefone.appendChild(document.createTextNode("(71) 3248-8349"));
+	colTelefone.appendChild(document.createTextNode(telefone));
 	linha.appendChild(colTelefone);
 	
 	tabela.appendChild(linha);
+	
+	var inputs = document.getElementsByTagName("input");
+	for (var x = 0; x < inputs.length; x++) {
+		if (inputs[x].type != "button"){
+			inputs[x].value = "";
+		}
+	}
+	
+	document.getElementById("nome").focus();
+	
 }
