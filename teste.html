@@ -1,28 +1,44 @@
 <html>
 	<head>
 		<script type="text/javascript" src="teste.js"></script>
+		<link rel="stylesheet" type="text/css" href="teste.css">
 	</head>
 	
 	<body>
-		<input type="text" id="nome"></input>
-		<input type="button" value="incluir" onclick="incluir()"></input>
-		<table id="pessoas">
-			<tr>
-				<th>Nome</th>
-				<th>Endereço</th>
-				<th>Telefone</th>
-			</tr>
-			<tr>
-				<td>Leonardo Baraúna</td>
-				<td>Jardim Camburi</td>
-				<td>(27) 99932-9154</td>
-			</tr>
-			<tr>
-				<td>Guilherme Baraúna</td>
-				<td>Praia do Canto</td>
-				<td>(27) 3237-0866</td>
-			</tr>
-		</table>
+		
+		<div id="header">
+			<p>Nome:</p>
+			<input type="text" id="nome" autofocus></input>
+			<p>Endereço:</p>
+			<input type="text" id="endereco"></input>
+			<p>Telefone:</p>
+			<input type="text" id="telefone"></input><br><br>
+			<input type="button" value="incluir" onclick="incluir()"></input>
+			<input type="button" value="cancelar" onclick="limpar()"></input>
+		</div>
+		<br><br>
+		
+		<div id="main">
+			<table id="pessoas" style="border: 1px solid black; border-collapse: collapse;">
+				<tr>
+					<th>Nome</th>
+					<th>Endereço</th>
+					<th>Celular</th>
+				</tr>
+				<tr>
+					<td>Leonardo Baraúna</td>
+					<td>Jardim Camburi</td>
+					<td>(27) 99932-9154</td>
+					<td><img alt="" src="..\html\images\exclude.jpg"></td>
+				</tr>
+				<tr>
+					<td>Guilherme Baraúna</td>
+					<td>Praia do Canto</td>
+					<td>(27) 3237-0866</td>
+					<td><img alt="" src="..\html\images\exclude.jpg"></td>
+				</tr>
+			</table>
+		</div>
 	</body>
 
 </html>
