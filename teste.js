@@ -1,6 +1,11 @@
-function alerta(){
-	
-	alert("teste");
+function excluir(elemento){
+	var tabela = document.getElementById("pessoas");
+	var linhas = tabela.getElementsByTagName("td");
+	for (var x = 0; x < linhas.length; x++) {
+		if(linhas[x].innerText == elemento){
+			linhas[x].parentNode.remove();
+		}
+	}
 }
 
 function limpar(){
@@ -35,13 +40,14 @@ function incluir() {
 	
 	var imagem = document.createElement("img");
 	imagem.setAttribute("src", "images/exclude.jpg");
-	imagem.addEventListener("click", alerta);
+	//imagem.addEventListener("click", excluir);
+	imagem.setAttribute("onclick", "excluir('" + nome + "')");
+	
 	
 	var colExcluir = document.createElement("td");
 	colExcluir.setAttribute("class", "imagem");
 	colExcluir.appendChild(imagem);
 	linha.appendChild(colExcluir);
-
 	
 	tabela.appendChild(linha);
 	
