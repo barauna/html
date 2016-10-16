@@ -1,3 +1,8 @@
+function alerta(){
+	
+	alert("teste");
+}
+
 function limpar(){
 	var inputs = document.getElementsByTagName("input");
 	for (var x = 0; x < inputs.length; x++) {
@@ -30,8 +35,10 @@ function incluir() {
 	
 	var imagem = document.createElement("img");
 	imagem.setAttribute("src", "images/exclude.jpg");
+	imagem.addEventListener("click", alerta);
 	
 	var colExcluir = document.createElement("td");
+	colExcluir.setAttribute("class", "imagem");
 	colExcluir.appendChild(imagem);
 	linha.appendChild(colExcluir);
 
