@@ -39,7 +39,7 @@ function incluir() {
 	tabela.appendChild(linha);
 	
 	limpar();
-	
+
 	document.getElementById("nome").focus();
 	
 }
